@@ -13,14 +13,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [20.x]
-
     steps:
       - uses: actions/checkout@v4
 
-      - run: npm ci
+      - run: npm install
       - run: npm run build-react
       - run: npm run test
 
