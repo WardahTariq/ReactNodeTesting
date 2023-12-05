@@ -1,8 +1,6 @@
-name: CI
+name: testing
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -26,6 +24,6 @@ jobs:
           switches: -avzr --delete
           path: ./*
           remote_path: /var/www/my-app/
-          remote_host: ec2-3-86-8-35.compute-1.amazonaws.com
+          remote_host: ec2-54-90-128-0.compute-1.amazonaws.com
           remote_user: ubuntu
           remote_key: "${{ secrets.SSH_PRIVATE_KEY }}"
